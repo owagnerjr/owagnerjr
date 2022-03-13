@@ -1,4 +1,4 @@
-//Lista Ordenada de Numeros Inteiros
+//Lista Ord.Numeros Inteiros
 #include<conio.h>
 #include<stdlib.h>
 #include<stdio.h>
