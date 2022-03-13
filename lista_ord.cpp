@@ -47,7 +47,7 @@ void remover(int valor) {
 		printf("\n\tERRO: valor nao esta na lista");
 }
 
-void exibir() {// Exibe a lista
+void exibir() {
 	int i;
 
 	if(tamanho==0){
