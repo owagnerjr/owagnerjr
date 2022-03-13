@@ -1,4 +1,4 @@
-//Lista Linear Ordenada de Numeros Inteiros
+//Lista Ordenada de Numeros Inteiros
 #include<conio.h>
 #include<stdlib.h>
 #include<stdio.h>
@@ -9,24 +9,24 @@ int tamanho=0, lista[TAM];
 void insere(int valor) {
 	int i;
 
-	if(tamanho==TAM-1) {	//verifica se a lista nao esta cheia
+	if(tamanho==TAM-1) {	//Verifcar se a lista não está cheia
 		printf("\n\tERRO: A lista esta cheia\n");
 		return;
 	}
 
-	for(i=tamanho; i>0 && valor<lista[i-1]; i--) {// faz com que os elementos deem um passo para tras
+	for(i=tamanho; i>0 && valor<lista[i-1]; i--) {// Elementos deem um passo atrás
 		lista[i]=lista[i-1];
 	}
 
-	lista[i]=valor;//elemento é inserido na posição que o loop parou
+	lista[i]=valor;
 	tamanho++;
 	printf("\nElemento inserido com sucesso!\n\n");
 }
 
-void remover(int valor) {//modificado em sala
+void remover(int valor) {
 	int i,j,cont=0;
 
-	if(tamanho==0) {//verifica se a lista esta vazia
+	if(tamanho==0) {
 		printf("\n\tErro: Lista vazia!");
 		return;
 	}
@@ -34,10 +34,10 @@ void remover(int valor) {//modificado em sala
 	for(i=0; i<tamanho && valor>=lista[i] ;i++) {
 		if(valor==lista[i]) {
 			for(j=i;j<tamanho-1;j++) {
-				lista[j]=lista[j+1];//faz os elementos darem um passo a frente
+				lista[j]=lista[j+1];
 			}
 			tamanho--;
-			i--;//faz o i voltar para o caso de haver numero repetidos
+			i--;
 			cont++;
 		}
 	}
@@ -60,7 +60,7 @@ void exibir() {// Exibe a lista
 	}
 }
 
-void buscar(int valor) {//modificado em sala
+void buscar(int valor) {
 	int i,aux=0;
 	if(tamanho==0) {
 		printf("\n\tERRO: Lista vazia");
@@ -78,7 +78,7 @@ void buscar(int valor) {//modificado em sala
 }
 
 void menu() {
-	printf("ACADEMICO: RENANN R. DA SILVA - RA:13106523\n\n");
+	printf("ACADEMICO: WAGNER P R JUNIOR - RA:13106523\n\n");
 	printf("\n##############################################");
 	printf("\n#           MENU - Lista Ordenada            #");
 	printf("\n#                                            #");
